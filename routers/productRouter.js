@@ -6,7 +6,9 @@ Router.get("/allProducts", productController.getAllProducts);
 Router.get("/download/:id",
 productController.getDownload,
 ); 
+Router.post("/recharge", productController.recharge);
 
+Router.use(authController.protect);
 Router.delete("/delete/:id",
 productController.deleteProduct,
 );                                  
